@@ -953,5 +953,9 @@ input.mail_bt::placeholder {
     margin-top: 90px;
 }
 
-
+@media (min-width: 1200px){
+    .container {
+        max-width: 75%;
+    }
+}
 /* copyright section end */

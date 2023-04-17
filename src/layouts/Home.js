@@ -1,3 +1,16 @@
+
+
+function openNav() {
+    console.log("openNav")
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+  
+  
 function Home() {
 	return (
 			<div class="banner_bg_main">
@@ -22,65 +35,7 @@ function Home() {
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-12">
-								<div class="logo"><a href="index.html"><img src="images/logo.png"/></a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="header_section">
-					<div class="container">
-						<div class="containt_main">
-							<div id="mySidenav" class="sidenav">
-								<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-								<a href="index.html">Home</a>
-								<a href="fashion.html">Fashion</a>
-								<a href="electronic.html">Electronic</a>
-								<a href="jewellery.html">Jewellery</a>
-							</div>
-							<span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"/></span>
-							<div class="dropdown">
-								<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Category 
-								</button>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<a class="dropdown-item" href="#">Action</a>
-									<a class="dropdown-item" href="#">Another action</a>
-									<a class="dropdown-item" href="#">Something else here</a>
-								</div>
-							</div>
-							<div class="main">
-								<div class="input-group">
-									<input type="text" class="form-control" placeholder="Search this blog" />
-									<div class="input-group-append">
-									<button class="btn btn-secondary" type="button" style={{backgroundColor: "#f26522;", borderColor: "#f26522;"}}>
-									<i class="fa fa-search"></i>
-									</button>
-									</div>
-								</div>
-							</div>
-							<div class="header_box">
-								<div class="lang_box ">
-									<a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
-									<img src="images/flag-uk.png" alt="flag" class="mr-2 " title="United Kingdom" /> English <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
-									</a>
-									<div class="dropdown-menu ">
-									<a href="#" class="dropdown-item">
-									<img src="images/flag-france.png" class="mr-2" alt="flag" />
-									French
-									</a>
-									</div>
-								</div>
-								<div class="login_menu">
-									<ul>
-									<li><a href="#">
-										<i class="fa fa-shopping-cart" aria-hidden="true"></i>
-										<span class="padding_10">Cart</span></a>
-									</li>
-									<li><a href="#">
-										<i class="fa fa-user" aria-hidden="true"></i>
-										<span class="padding_10">Cart</span></a>
-									</li>
-									</ul>
-								</div>
+								<div class="logo"><a href="index.html"><img src={process.env.PUBLIC_URL + "/images/logo_no_bg.png"} /></a></div>
 							</div>
 						</div>
 					</div>
@@ -92,7 +47,7 @@ function Home() {
 								<div class="carousel-item active">
 									<div class="row">
 									<div class="col-sm-12">
-										<h1 class="banner_taital">Get Start <br/>Your favriot shoping</h1>
+										<h1 class="banner_taital">Get Start <br/>Your favourite Resin Art</h1>
 										<div class="buynow_bt"><a href="#">Buy Now</a></div>
 									</div>
 									</div>
@@ -100,7 +55,7 @@ function Home() {
 								<div class="carousel-item">
 									<div class="row">
 									<div class="col-sm-12">
-										<h1 class="banner_taital">Get Start <br/>Your favriot shoping</h1>
+										<h1 class="banner_taital">Get Start <br/>Your favourite shoping</h1>
 										<div class="buynow_bt"><a href="#">Buy Now</a></div>
 									</div>
 									</div>
@@ -108,7 +63,7 @@ function Home() {
 								<div class="carousel-item">
 									<div class="row">
 									<div class="col-sm-12">
-										<h1 class="banner_taital">Get Start <br/>Your favriot shoping</h1>
+										<h1 class="banner_taital">Get Start <br/>Your favourite shoping</h1>
 										<div class="buynow_bt"><a href="#">Buy Now</a></div>
 									</div>
 									</div>
@@ -123,135 +78,65 @@ function Home() {
 				</div>
 			</div>
 		</div>
+		<br/><br/><br/>
 		<div class="fashion_section">
 			<div id="main_slider" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
-				<div class="carousel-item active">
-					<div class="container">
-						<h1 class="fashion_taital">Keychains</h1>
-						<div class="fashion_section_2">
-							<div class="row">
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Man T -shirt</h4>
-									<p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
-									<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/tshirt-img.png"}/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
+					{	
+						Array.from(Array(3)).map((e, i) => {
+							let num = 0
+							if(i){
+								num = i * 4
+							}
+							return (
+								<div class={ i==0?"carousel-item active":"carousel-item"  }>
+									<div className="container">
+										<h1 class="fashion_taital">Keychain's</h1>
+										<div class="fashion_section_2">
+											<div class="row">
+											<div class="col-lg-3 col-sm-4">
+												<div class="box_main">
+													<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/keychain/keychain"+(i+num+1)+".jpg"}/></div>
+													<div class="btn_main">
+														<div class="buy_bt"><a href="#">Buy Now</a></div>
+														<div class="seemore_bt"><a href="#">See More</a></div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3 col-sm-4">
+												<div class="box_main">
+													<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/keychain/keychain"+(i+num+2)+".jpg"}/></div>
+													<div class="btn_main">
+														<div class="buy_bt"><a href="#">Buy Now</a></div>
+														<div class="seemore_bt"><a href="#">See More</a></div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3 col-sm-4">
+												<div class="box_main">
+													<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/keychain/keychain"+(i+num+3)+".jpg"}/></div>
+													<div class="btn_main">
+														<div class="buy_bt"><a href="#">Buy Now</a></div>
+														<div class="seemore_bt"><a href="#">See More</a></div>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-3 col-sm-4">
+												<div class="box_main">
+													<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/keychain/keychain"+(i+num+4)+".jpg"}/></div>
+													<div class="btn_main">
+														<div class="buy_bt"><a href="#">Buy Now</a></div>
+														<div class="seemore_bt"><a href="#">See More</a></div>
+													</div>
+												</div>
+											</div>
+											</div>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Man -shirt</h4>
-									<p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
-									<div class="tshirt_img"><img src={process.env.PUBLIC_URL +"/images/dress-shirt-img.png"} /></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Woman Scart</h4>
-									<p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
-									<div class="tshirt_img"><img src={process.env.PUBLIC_URL+"/images/women-clothes-img.png"} /></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<div class="container">
-						<h1 class="fashion_taital">Man & Woman Fashion</h1>
-						<div class="fashion_section_2">
-							<div class="row">
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Man T -shirt</h4>
-									<p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
-									<div class="tshirt_img"><img src="images/tshirt-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Man -shirt</h4>
-									<p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
-									<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/dress-shirt-img.png"}/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Woman Scart</h4>
-									<p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
-									<div class="tshirt_img"><img src="images/women-clothes-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<div class="container">
-						<h1 class="fashion_taital">Man & Woman Fashion</h1>
-						<div class="fashion_section_2">
-							<div class="row">
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Man T -shirt</h4>
-									<p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
-									<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "images/tshirt-img.png"} /></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Man -shirt</h4>
-									<p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
-									<div class="tshirt_img"><img src={process.env.PUBLIC_URL+"images/dress-shirt-img.png"} /></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Woman Scart</h4>
-									<p class="price_text">Price  <span style={{color: "#262626;"}}>$ 30</span></p>
-									<div class="tshirt_img"><img src={process.env.PUBLIC_URL+"images/women-clothes-img.png"}/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							</div>
-						</div>
-					</div>
-				</div>
+							)
+						})
+					}
 				</div>
 				<a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
 				<i class="fa fa-angle-left"></i>
@@ -261,283 +146,72 @@ function Home() {
 				</a>
 			</div>
 		</div>
+		<br/><br/><br/>
 		<div class="fashion_section">
 			<div id="electronic_main_slider" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
-				<div class="carousel-item active">
-					<div class="container">
-						<h1 class="fashion_taital">Electronic</h1>
-						<div class="fashion_section_2">
-							<div class="row">
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Laptop</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="electronic_img"><img src="images/laptop-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
+						{	
+							Array.from(Array(4)).map((e, i) => {
+								let num = 0
+								if(i){
+									num = i * 4
+								}
+								return (
+									<div class={ i==0?"carousel-item active":"carousel-item"  }>
+										<div className="container">
+											<h1 class="fashion_taital">Frame's</h1>
+											<div class="fashion_section_2">
+												<div class="row">
+												<div class="col-lg-3 col-sm-4">
+													<div class="box_main">
+														<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/frames/frame"+(i+num+1)+".jpg"}/></div>
+														<div class="btn_main">
+															<div class="buy_bt"><a href="#">Buy Now</a></div>
+															<div class="seemore_bt"><a href="#">See More</a></div>
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<div class="box_main">
+														<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/frames/frame"+(i+num+2)+".jpg"}/></div>
+														<div class="btn_main">
+															<div class="buy_bt"><a href="#">Buy Now</a></div>
+															<div class="seemore_bt"><a href="#">See More</a></div>
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<div class="box_main">
+														<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/frames/frame"+(i+num+3)+".jpg"}/></div>
+														<div class="btn_main">
+															<div class="buy_bt"><a href="#">Buy Now</a></div>
+															<div class="seemore_bt"><a href="#">See More</a></div>
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<div class="box_main">
+														<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/frames/frame"+(i+num+4)+".jpg"}/></div>
+														<div class="btn_main">
+															<div class="buy_bt"><a href="#">Buy Now</a></div>
+															<div class="seemore_bt"><a href="#">See More</a></div>
+														</div>
+													</div>
+												</div>
+												</div>
+											</div>
+										</div>
 									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Mobile</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="electronic_img"><img src="images/mobile-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Computers</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="electronic_img"><img src="images/computer-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							</div>
-						</div>
+								)
+							})
+						}
 					</div>
-				</div>
-				<div class="carousel-item">
-					<div class="container">
-						<h1 class="fashion_taital">Electronic</h1>
-						<div class="fashion_section_2">
-							<div class="row">
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Laptop</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="electronic_img"><img src="images/laptop-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Mobile</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="electronic_img"><img src="images/mobile-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Computers</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="electronic_img"><img src="images/computer-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<div class="container">
-						<h1 class="fashion_taital">Electronic</h1>
-						<div class="fashion_section_2">
-							<div class="row">
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Laptop</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="electronic_img"><img src="images/laptop-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Mobile</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="electronic_img"><img src="images/mobile-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Computers</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="electronic_img"><img src="images/computer-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				</div>
-				<a class="carousel-control-prev" href="#electronic_main_slider" role="button" data-slide="prev">
-				<i class="fa fa-angle-left"></i>
-				</a>
-				<a class="carousel-control-next" href="#electronic_main_slider" role="button" data-slide="next">
-				<i class="fa fa-angle-right"></i>
-				</a>
-			</div>
-		</div>
-		<div class="jewellery_section">
-			<div id="jewellery_main_slider" class="carousel slide" data-ride="carousel">
-				<div class="carousel-inner">
-				<div class="carousel-item active">
-					<div class="container">
-						<h1 class="fashion_taital">Jewellery Accessories</h1>
-						<div class="fashion_section_2">
-							<div class="row">
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Jumkas</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="jewellery_img"><img src="images/jhumka-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Necklaces</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="jewellery_img"><img src="images/neklesh-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Kangans</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="jewellery_img"><img src="images/kangan-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<div class="container">
-						<h1 class="fashion_taital">Jewellery Accessories</h1>
-						<div class="fashion_section_2">
-							<div class="row">
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Jumkas</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="jewellery_img"><img src="images/jhumka-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Necklaces</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="jewellery_img"><img src="images/neklesh-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Kangans</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="jewellery_img"><img src="images/kangan-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<div class="container">
-						<h1 class="fashion_taital">Jewellery Accessories</h1>
-						<div class="fashion_section_2">
-							<div class="row">
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Jumkas</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="jewellery_img"><img src="images/jhumka-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Necklaces</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="jewellery_img"><img src="images/neklesh-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="box_main">
-									<h4 class="shirt_text">Kangans</h4>
-									<p class="price_text">Start Price  <span style={{color: "#262626;"}}>$ 100</span></p>
-									<div class="jewellery_img"><img src="images/kangan-img.png"/></div>
-									<div class="btn_main">
-										<div class="buy_bt"><a href="#">Buy Now</a></div>
-										<div class="seemore_bt"><a href="#">See More</a></div>
-									</div>
-								</div>
-							</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				</div>
-				<a class="carousel-control-prev" href="#jewellery_main_slider" role="button" data-slide="prev">
-				<i class="fa fa-angle-left"></i>
-				</a>
-				<a class="carousel-control-next" href="#jewellery_main_slider" role="button" data-slide="next">
-				<i class="fa fa-angle-right"></i>
-				</a>
-				<div class="loader_main">
-				<div class="loader"></div>
-				</div>
+						<a class="carousel-control-prev" href="#electronic_main_slider" role="button" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a class="carousel-control-next" href="#electronic_main_slider" role="button" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
 			</div>
 		</div>
 		<div class="footer_section layout_padding">
