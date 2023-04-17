@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/snel/static/css/main.e6c13ad2.css",
+    "main.js": "/snel/static/js/main.edeafb3f.js",
+    "index.html": "/snel/index.html",
+    "main.e6c13ad2.css.map": "/snel/static/css/main.e6c13ad2.css.map",
+    "main.edeafb3f.js.map": "/snel/static/js/main.edeafb3f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.edeafb3f.js"
+  ]
+}
