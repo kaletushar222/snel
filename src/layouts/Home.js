@@ -13,6 +13,7 @@ function closeNav() {
   
 function Home() {
 	return (
+	<div>
 			<div class="banner_bg_main">
 				<div class="container">
 					<div class="header_section_top">
@@ -214,13 +215,41 @@ function Home() {
 						</a>
 			</div>
 		</div>
+		</div>
+		{/* <section class="contact-us">
+			<div class="container">
+				<h2>Contact Us</h2>
+				<p style={{margin: 0}}>Have a question or comment? We'd love to hear from you!</p>
+				<br/>
+				<form action="#" method="POST">
+					<div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" class="form-control" id="name" name="name" required />
+					</div>
+					<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" class="form-control" id="email" name="email" required />
+					</div>
+					<div class="form-group">
+					<label for="message">Message:</label>
+					<textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+					</div>
+					<button type="submit" class="btn btn-primary">Send</button>
+				</form>
+			</div>
+		</section> */}
+		<br/>
 		<div class="footer_section layout_padding">
 			<div class="container">
-			<div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"/></a></div>
-			<div class="input_bt">
-			<input type="text" class="mail_bt" placeholder="Your Email" name="Your Email"/>
-			<span class="subscribe_bt" id="basic-addon2"><a href="#">Subscribe</a></span>
-			</div>
+				<div class="social-media">
+					snel_art_decorr
+					<a href="https://www.instagram.com/snel_art_decorr/" target="_blank" class="icon" style={{ "fontSize":"48px", "color" : "red" }}><i class="fab fa-instagram"></i></a>
+					<br/>
+				</div>
+				<br/>
+				<center><p style={{fontSize: "20px"}}>Business enquiries - snelartdecor@gmail.com </p></center>
+				<br/><br/>
+			<div class="input_bt"></div>
 			<div class="footer_menu">
 			<ul>
 				<li><a href="#">Best Sellers</a></li>
@@ -230,8 +259,8 @@ function Home() {
 				<li><a href="#">Customer Service</a></li>
 			</ul>
 			</div>
-			<div class="location_main">Help Line  Number : <a href="#">+1 1800 1200 1200</a></div>
 			</div>
+			TK web
 		</div>
 	</div>
 	);
