@@ -1,4 +1,4 @@
---------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+/* --------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
 /*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
 
 @import url(animate.min.css);
@@ -214,7 +214,7 @@ button {
 .banner_bg_main {
     width: 100%;
     float: left;
-    background-image: url(../images/banner-bg.png);
+    background-image: url(../images/banner-bg3.png);
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -819,6 +819,7 @@ a:hover {
     float: left;
     background-color: #252525;
     height: auto;
+    color: #fff;
 }
 
 .footer_logo {
@@ -958,4 +959,57 @@ input.mail_bt::placeholder {
         max-width: 75%;
     }
 }
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+}
+
 /* copyright section end */
+
+footer {
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  .icon {
+    display: block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .icon:hover {
+    color: #007bff;
+  }
+
+  .contact-us {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+  }
+  
+  .contact-us h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-us p {
+    margin-bottom: 20px;
+  }
+  
+  .contact-us label {
+    font-weight: bold;
+  }
+  
+  .contact-us textarea {
+    resize: vertical;
+  }
