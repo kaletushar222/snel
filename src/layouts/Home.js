@@ -49,7 +49,7 @@ function Home() {
 									<div class="row">
 									<div class="col-sm-12">
 										<h1 class="banner_taital">Get Start <br/>Your favourite Resin Art</h1>
-										<div class="buynow_bt"><a href="#">Buy Now</a></div>
+										<div class="buynow_bt"><a href="#footer_section">Buy Now</a></div>
 									</div>
 									</div>
 								</div>
@@ -57,7 +57,7 @@ function Home() {
 									<div class="row">
 									<div class="col-sm-12">
 										<h1 class="banner_taital">Get Start <br/>Your favourite shoping</h1>
-										<div class="buynow_bt"><a href="#">Buy Now</a></div>
+										<div class="buynow_bt"><a href="#footer_section">Buy Now</a></div>
 									</div>
 									</div>
 								</div>
@@ -65,7 +65,7 @@ function Home() {
 									<div class="row">
 									<div class="col-sm-12">
 										<h1 class="banner_taital">Get Start <br/>Your favourite shoping</h1>
-										<div class="buynow_bt"><a href="#">Buy Now</a></div>
+										<div class="buynow_bt"><a href="#footer_section">Buy Now</a></div>
 									</div>
 									</div>
 								</div>
@@ -92,7 +92,7 @@ function Home() {
 							return (
 								<div class={ i==0?"carousel-item active":"carousel-item"  }>
 									<div className="container">
-										<h1 class="fashion_taital">Keychain's</h1>
+										<h1 style={{color: "#fff"}} class="fashion_taital">Keychain's</h1>
 										<div class="fashion_section_2">
 											<div class="row">
 											<div class="col-lg-3 col-sm-4">
@@ -239,29 +239,31 @@ function Home() {
 			</div>
 		</section> */}
 		<br/>
-		<div class="footer_section layout_padding">
-			<div class="container">
-				<div class="social-media">
-					snel_art_decorr
-					<a href="https://www.instagram.com/snel_art_decorr/" target="_blank" class="icon" style={{ "fontSize":"48px", "color" : "red" }}><i class="fab fa-instagram"></i></a>
+			<div id="footer_section" class="footer_section layout_padding">
+				<div class="container">
+					<div class="social-media">
+					Send a DM For Orders 
+						<a href="https://www.instagram.com/snel_art_decorr/" target="_blank" class="icon insta-icon">
+						snel_art_decorr <i class="fab fa-instagram"></i>
+						</a>
+						<br/>
+					</div>
 					<br/>
+					<center><p style={{fontSize: "20px"}}>Business enquiries - snelartdecor@gmail.com </p></center>
+					<br/><br/>
+				<div class="input_bt"></div>
+				<div class="footer_menu">
+				<ul>
+					<li><a href="#">Best Sellers</a></li>
+					<li><a href="#">Gift Ideas</a></li>
+					<li><a href="#">New Releases</a></li>
+					<li><a href="#">Today's Deals</a></li>
+					<li><a href="#">Customer Service</a></li>
+				</ul>
 				</div>
-				<br/>
-				<center><p style={{fontSize: "20px"}}>Business enquiries - snelartdecor@gmail.com </p></center>
-				<br/><br/>
-			<div class="input_bt"></div>
-			<div class="footer_menu">
-			<ul>
-				<li><a href="#">Best Sellers</a></li>
-				<li><a href="#">Gift Ideas</a></li>
-				<li><a href="#">New Releases</a></li>
-				<li><a href="#">Today's Deals</a></li>
-				<li><a href="#">Customer Service</a></li>
-			</ul>
+				</div>
+				TK web
 			</div>
-			</div>
-			TK web
-		</div>
 	</div>
 	);
 }

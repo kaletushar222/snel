@@ -973,12 +973,12 @@ footer {
   }
   
   .social-media {
-    display: flex;
+    display: grid;
     justify-content: center;
     color: #fff;
     font-size: 24px;
   }
-  
+
   .icon {
     display: block;
     margin: 0 10px;
@@ -1012,4 +1012,11 @@ footer {
   
   .contact-us textarea {
     resize: vertical;
+  }
+
+  .insta-icon {
+    font-size: 32px;
+    background: -webkit-linear-gradient(#ff0037, #c9bcbc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
