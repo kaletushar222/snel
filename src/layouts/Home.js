@@ -99,8 +99,8 @@ function Home() {
 												<div class="box_main">
 													<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/keychain/keychain"+(i+num+1)+".jpg"}/></div>
 													<div class="btn_main">
-														<div class="buy_bt"><a href="#">Buy Now</a></div>
-														<div class="seemore_bt"><a href="#">See More</a></div>
+														<div class="buy_bt"><a href="#footer_section">Buy Now</a></div>
+														<div class="seemore_bt"><a href="#footer_section">See More</a></div>
 													</div>
 												</div>
 											</div>
@@ -108,8 +108,8 @@ function Home() {
 												<div class="box_main">
 													<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/keychain/keychain"+(i+num+2)+".jpg"}/></div>
 													<div class="btn_main">
-														<div class="buy_bt"><a href="#">Buy Now</a></div>
-														<div class="seemore_bt"><a href="#">See More</a></div>
+														<div class="buy_bt"><a href="#footer_section">Buy Now</a></div>
+														<div class="seemore_bt"><a href="#footer_section">See More</a></div>
 													</div>
 												</div>
 											</div>
@@ -117,8 +117,8 @@ function Home() {
 												<div class="box_main">
 													<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/keychain/keychain"+(i+num+3)+".jpg"}/></div>
 													<div class="btn_main">
-														<div class="buy_bt"><a href="#">Buy Now</a></div>
-														<div class="seemore_bt"><a href="#">See More</a></div>
+														<div class="buy_bt"><a href="#footer_section">Buy Now</a></div>
+														<div class="seemore_bt"><a href="#footer_section">See More</a></div>
 													</div>
 												</div>
 											</div>
@@ -126,8 +126,8 @@ function Home() {
 												<div class="box_main">
 													<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/keychain/keychain"+(i+num+4)+".jpg"}/></div>
 													<div class="btn_main">
-														<div class="buy_bt"><a href="#">Buy Now</a></div>
-														<div class="seemore_bt"><a href="#">See More</a></div>
+														<div class="buy_bt"><a href="#footer_section">Buy Now</a></div>
+														<div class="seemore_bt"><a href="#footer_section">See More</a></div>
 													</div>
 												</div>
 											</div>
@@ -167,8 +167,8 @@ function Home() {
 													<div class="box_main">
 														<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/frames/frame"+(i+num+1)+".jpg"}/></div>
 														<div class="btn_main">
-															<div class="buy_bt"><a href="#">Buy Now</a></div>
-															<div class="seemore_bt"><a href="#">See More</a></div>
+															<div class="buy_bt"><a href="#footer_section">Buy Now</a></div>
+															<div class="seemore_bt"><a href="#footer_section">See More</a></div>
 														</div>
 													</div>
 												</div>
@@ -176,8 +176,8 @@ function Home() {
 													<div class="box_main">
 														<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/frames/frame"+(i+num+2)+".jpg"}/></div>
 														<div class="btn_main">
-															<div class="buy_bt"><a href="#">Buy Now</a></div>
-															<div class="seemore_bt"><a href="#">See More</a></div>
+															<div class="buy_bt"><a href="#footer_section">Buy Now</a></div>
+															<div class="seemore_bt"><a href="#footer_section">See More</a></div>
 														</div>
 													</div>
 												</div>
@@ -185,8 +185,8 @@ function Home() {
 													<div class="box_main">
 														<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/frames/frame"+(i+num+3)+".jpg"}/></div>
 														<div class="btn_main">
-															<div class="buy_bt"><a href="#">Buy Now</a></div>
-															<div class="seemore_bt"><a href="#">See More</a></div>
+															<div class="buy_bt"><a href="#footer_section">Buy Now</a></div>
+															<div class="seemore_bt"><a href="#footer_section">See More</a></div>
 														</div>
 													</div>
 												</div>
@@ -194,8 +194,8 @@ function Home() {
 													<div class="box_main">
 														<div class="tshirt_img"><img src={process.env.PUBLIC_URL + "/images/frames/frame"+(i+num+4)+".jpg"}/></div>
 														<div class="btn_main">
-															<div class="buy_bt"><a href="#">Buy Now</a></div>
-															<div class="seemore_bt"><a href="#">See More</a></div>
+															<div class="buy_bt"><a href="#footer_section">Buy Now</a></div>
+															<div class="seemore_bt"><a href="#footer_section">See More</a></div>
 														</div>
 													</div>
 												</div>
